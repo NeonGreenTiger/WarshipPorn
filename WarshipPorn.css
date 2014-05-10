@@ -1,0 +1,1505 @@
+/* Autowikibot hover to display by /u/Dropping_fruits */
+/* Code updates and discussion: http://redd.it/1vr0r2 */
+
+.comment .md h5+h6+h4+p,
+.comment .md h5+h6+h4+p+hr,
+.comment .md h5+h6+h4+p+hr+blockquote,
+.comment .md h5+h6+h4+p+hr+blockquote+hr,
+.comment .md h5+h6+h4+p+hr+blockquote+hr+p,
+.comment .md h5+h6+h4+p+hr+blockquote+hr+p+p {
+    display: none;
+}
+
+.comment .md:hover h5+h6+h4+p,
+.comment .md:hover h5+h6+h4+p+hr,
+.comment .md:hover h5+h6+h4+p+hr+blockquote,
+.comment .md:hover h5+h6+h4+p+hr+blockquote+hr,
+.comment .md:hover h5+h6+h4+p+hr+blockquote+hr+p,
+.comment .md:hover h5+h6+h4+p+hr+blockquote+hr+p+p {
+    display: block;
+}
+
+.comment .md h5+h6+h4:after {
+    content: "Autowikibot post. Hover to view";
+}
+
+.comment .md:hover h5+h6+h4:after {
+content: ""
+}
+/* end wikibot code=============================================================================================================================================================*/
+
+.newComments {
+  color: gold !important;
+}
+
+/* Changes RES upvote count color to crimson; standard color was difficult to read against the grey background =================================================================*/
+
+span.res_comment_ups {
+  color: crimson;
+  font-weight: bold;
+}
+
+span.res_post_ups {
+  color: gold;
+  font-weight: bold;
+}
+
+/* Changes RES downvote count color to navy to match styles ===================================================================================================================*/
+span.res_comment_downs {
+  color: navy;
+  font-weight: bold;
+}
+
+span.res_post_downs {
+  color: navy;
+  font-weight: bold;
+}
+
+/*announcement sticky===============================================================================================================================================================*/
+ div.content {
+/*This lowers the links to create space
+ margin-top:70px;                       */
+ }
+ .titlebox form {
+/*Hack to enable repositioning of child elements*/
+ position: static
+ }
+ .side h3:nth-of-type(1) {
+/*this code positions the sticky*/
+ position:absolute;
+ display: block;
+ top:214px;
+ left:40px;
+/*this code styles the sticky*/
+ background-color: #F2F2F2;
+ color: #555555;
+ text-align: left;
+ margin: 15px;
+ border-radius: 8px;
+ width: 50%;
+ padding: 5px 0px 5px 40px;
+/*this code creates the image*/
+ background-image: url(%%battleship-icon-1%%);
+ background-repeat: no-repeat;
+ background-position:left;
+ }
+
+/* sticky note on top w/message ================================================================ DISABLED ====================================================================
+body >.content >.sharelink ~ .sitetable:before { 
+content: "Our first AMA, featuring our resident expert on the Battle of Midway, When_Ducks_Attack, will be 30 November at 1PM Eastern! Check out our wiki page for more information about upcoming AMAs."; 
+background-color: #F6E69F;
+border: 1px solid orange;
+font-family: verdana, sans-serif; 
+font-size: 14px; 
+color: #555;
+text-align: left;
+display: block;
+padding:5px 10px;
+margin:5px 305px 5px 0px;
+border-radius: 16px; 
+} */
+
+/* Change main font ================================================================================================================================================ (disabled)
+body {
+font-family: 'Tahoma', cursive;
+} */
+
+/* So that links don't take on styles in moderator logs ================================================================================================================= */
+.modactions a.subreddit.hover, .modactions h1.hover.redditname {
+color: #369 !important;
+text-shadow: 0px 0px 0px black !important;
+font-size: 100% !important;
+}
+
+/* clean up styles from where it doesn't belong ====================================================================================================================== */
+.RESdupeimg, .domain {
+text-shadow: 0px 0px black;
+}
+
+/* Subreddit name in sidebar ============================================================================================================================================*/
+a.hover, h1.hover.redditname {
+color: white !important;
+text-shadow: 3px 3px 1px black;
+font-size: xx-large;
+}
+/* Removes white background from mod actions ================================================================================================================================== */
+a.moderator-mail { background:#b0bac3; }
+a.reddit-edit { background:#b0bac3; }
+a.reddit-moderators { background:#b0bac3; }
+a.reddit-contributors { background:#b0bac3; }
+a.reddit-traffic { background:#b0bac3; }
+a.reddit-reported { background:#b0bac3; }
+a.reddit-spam { background:#b0bac3; }
+a.reddit-ban { background:#b0bac3; }
+a.reddit-flair { background:#b0bac3; }
+a.reddit-moderationlog { background:#b0bac3; }
+a.reddit-modqueue { background:#b0bac3; }
+
+/* number of subscribers in sidebar ===================================================================================================================================*/
+span.number {
+    color:black !important;
+    font-size: 120%;
+    }
+/*replace "readers" with something else*/  
+
+div.titlebox span.word {  
+display: none  
+}  
+
+div.titlebox span.number:after {  
+    content: " sailors";  
+    }  
+
+/* you are a moderator text */
+.leavemoderator { 
+    background-color:transparent; 
+    color:black;
+    }
+
+/*Changing 'MODERATORS in sidebar*/  
+
+.sidecontentbox h1:not(:first-child) {
+font-size: 0pt !important
+}
+
+.sidecontentbox h1:not(:first-child):after {
+font-size: 10pt !important;
+content: "FLEET ADMIRALS";
+color: black !important;
+}
+
+/*============================== bold post titles=======================================================================================================================(disabled)
+.link .title {
+font-weight: bold;
+}   */
+
+/* comment section, visited pic link focused ================================================================================================================================= */
+.entry.likes.keyHighlight .hoverZoomLink.imgScanned.imgFound.hasListener:visited, .entry.likes.lcTagged.keyHighlight .hoverZoomLink.imgScanned.imgFound.hasListener:visited, .entry.keyHighlight.unvoted .hoverZoomLink.imgScanned.imgFound.hasListener:visited, .entry.lcTagged.keyHighlight.unvoted .hoverZoomLink.imgScanned.imgFound.hasListener:visited, .entry.keyHighlight.dislikes .hoverZoomLink.imgScanned.imgFound.hasListener:visited, .keyHighlight.lcTagged.dislikes .hoverZoomLink.imgScanned.imgFound.hasListener:visited {
+color:lightsteelblue;
+} 
+
+/* comment section, visited pic link unfocused ===============================================================================================================================*/
+.thing .hoverZoomLink.imgScanned.imgFound.hasListener:visited, .hoverZoomLink.imgScanned.imgFound:visited, hoverzoomlink.imgScanned.hasListener:visited { color: black; /*rgb(220,250,255)*/}
+
+/* post title, unread ============================================================================================================================================= */
+.thing .title.loggedin, .thing .title.loggedin.click, .thing .title, .thing .title.click {
+color: black;
+/* text-shadow: 1px 1px white; */
+}
+
+/* post title, visited ============================================================================================================================================= */
+.thing .title.loggedin:visited, .thing .title.loggedin.click:visited, .thing .title:visited, .thing .title.click:visited {
+color: #00005b; /* was darkblue */
+/* text-shadow: 1px 1px black; */
+}
+
+/* change visited post title when highlighted, colors are too similar ===================================================================================================== */
+.entry.likes.keyHighlight .title.loggedin:visited, .entry.likes.lcTagged.keyHighlight .title.loggedin:visited, .entry.keyHighlight.unvoted .title.loggedin:visited, .entry.lcTagged.keyHighlight.unvoted .title.loggedin:visited, .entry.keyHighlight.dislikes .title.loggedin:visited, .keyHighlight.lcTagged.dislikes .title.loggedin:visited, .entry.likes.keyHighlight .title:visited, .entry.likes.lcTagged.keyHighlight .title:visited, .entry.keyHighlight.unvoted .title:visited, .entry.lcTagged.keyHighlight.unvoted .title:visited, .entry.keyHighlight.dislikes .title:visited, .keyHighlight.lcTagged.dislikes .title:visited {
+color:azure;
+}    
+/* new links------=======================================*/
+.entry.likes.keyHighlight .title.loggedin, .entry.likes.lcTagged.keyHighlight .title.loggedin, .entry.keyHighlight.unvoted .title.loggedin, .entry.lcTagged.keyHighlight.unvoted .title.loggedin, .entry.keyHighlight.dislikes .title.loggedin, .keyHighlight.lcTagged.dislikes .title.loggedin, .entry.likes.keyHighlight .title, .entry.likes.lcTagged.keyHighlight .title, .entry.keyHighlight.unvoted .title, .entry.lcTagged.keyHighlight.unvoted .title, .entry.keyHighlight.dislikes .title, .keyHighlight.lcTagged.dislikes .title {
+color:white;
+}    
+
+/*  frontpage post karma score ======================================================================================================================================= */
+.score.likes {
+    color: gold!important; /* white */
+    text-shadow: 1px 1px black;
+    font-size: small !important  
+    }
+.score.unvoted { 
+    color: gray!important; /* #C6C6C6 */
+    text-shadow: 1px 1px black;
+    font-size: small !important;
+    }
+.score.dislikes {
+    color: #333399!important; /* grey */
+    text-shadow: 1px 1px black;
+    font-size: small !important;
+    }
+
+/* adds curvy box around up/downvote arrows ===============================================================================================================================*/
+div.midcol {
+    background: dimgrey;
+    border-radius: 7px;
+}
+
+/* comment page comment score, separate entries for liked, unvoted and disliked================================================================================================== */
+span.score.likes {
+    color: blue !important;
+    text-shadow: 0px 0px black;
+    font-size: x-small !important; 
+    }
+span.score.unvoted { 
+    color: blue !important; 
+    text-shadow: 0px 0px black;
+    font-size: x-small !important;
+    }
+span.score.dislikes {
+    color: blue !important;
+    text-shadow: 0px 0px black;
+    font-size: x-small !important;
+    }
+
+/* selected entry bg color, separate entries for liked, unvoted and disliked =================================================================================================*/
+.entry.likes.keyHighlight, .entry.likes.lcTagged.keyHighlight {
+    background-color: dimgrey;
+    color: white;
+    }
+.entry.keyHighlight.unvoted, .entry.lcTagged.keyHighlight.unvoted {
+    background-color: dimgrey;
+    color: white;
+    }
+.entry.keyHighlight.dislikes, .keyHighlight.lcTagged.dislikes {
+    background-color: dimgrey;
+    color: white;
+    }
+/* so self-post text isnt turned white and thus hidden =========================================================================================================================== */
+.expando .usertext-body {
+    color:black !important;
+}
+
+/* Change Background colour for sidebar submit/create =============================================================================================================================*/
+.side { 
+    background-color:#B0BAC3; 
+    color: white; /* text color*/
+/*    margin: 45px 5px 0 5px; */ /* adds room for submit a link button at the top ===============================DISABLED====================================================== */
+ }
+
+/*  search button properties =========================================================================================================== */
+.side form#search input[name="q"] {
+    border-radius: 7px;
+    line-height: 25px;
+    text-align: center;
+    height: 30px;
+    }
+.side form#search input[name="q"]:hover {
+    background: #888;
+    border: 2px solid;
+    border-color: gold;
+    border-radius: 1px;
+    height: 28px;    
+    line-height: 25px;
+    text-align: center;
+    border-radius: 7px;
+    }
+
+#searchexpando {    /* search expando box properties..when you click on "search reddit" ============================================================================== */
+    border-radius: 7px;
+    border: 1px solid #5F99CF;
+    background-color: #B0BAC3;
+    color: black;
+    }
+
+.login-form-side {   /* rounded corners on login form ============================================================================================================ /*
+    border-radius: 7px;
+    }
+
+.titlebox { 
+    background-color:#B0BAC3; 
+    color: white; /* text color*/
+ }
+.sidebox {
+    background-color:#B0BAC3; 
+    color: white; /* text color*/
+ }
+.sidebox.create .spacer {
+    background-color:#B0BAC3; 
+    color: white; /* text color*/
+}
+ .sidebox.submit .spacer {  
+    background-color:#B0BAC3; 
+    color: white; /* text color*/
+    display: none; /* turns it off altogether */
+} 
+
+/* submit a new link button location ======================================================================================================================================= */
+/* .sidebox.submit.submit-link {    
+    position: absolute;
+    top: 237px; 
+    width: 300px;
+} */
+
+/* submit a new link button location ======================================================================================================================================= */
+/* .sidebox.submit.submit-text {    
+    position: absolute;
+    top: 307px; 
+    width: 300px;
+} */
+.morelink .nub {
+    background-color:#B0BAC3; 
+    color: white; /* text color*/
+}
+
+.morelink {   /* submit a new link button properties ======================================================================================================================= */
+    background: white;
+    border: 2px solid white;
+    font-size: 165%;
+    font-weight: bold;
+    letter-spacing: 0px;
+/*    font-family: "Console" */
+    height: 30px;
+    border-radius: 7px;
+}
+.morelink a {
+    color: #888;
+    }
+.morelink:hover {
+    background: #888;
+    border: 2px solid; 
+    border-color: gold;
+    border-radius: 1px;
+    height: 30px;
+    border-radius: 7px;
+    }
+.morelink:hover a {
+color: #b0bac3;
+}
+
+.morelink .nub, .morelink .nub:hover {
+    display: none
+    }  
+
+/* sidebar text ============================================================================================================================================================*/
+.titlebox .usertext-body {
+     color: black;
+     }
+
+/* post ranking text=================================================================================================================================================*/
+
+.rank { 
+    color:white !important; 
+    text-shadow: 1px 1px black;
+    }
+
+#sitetable { 
+    color:white !important; 
+    text-shadow: 1px 1px black;
+    }
+
+/* tagline for posts ================================================================================================================================================*/
+
+.tagline {
+    color: black;
+    }   
+
+/* Banner Area =========================================================================================================================================*/
+body {
+    background: #B0BAC3;
+    }
+
+#header {
+    max-width:100%;
+    background: url(%%active2%%) #ffffff repeat top left; 
+    border-bottom: 5px solid blue
+    }
+
+#header .redditname a {
+    /* visibility:hidden; */                       /*  this hides it altogether */
+    font-size: 80%;
+    color: white;
+    text-shadow: 1px 1px black; 
+    } 
+.pagename a {
+    text-transform: uppercase
+    }
+
+#header-img {
+    margin-top: -22px;
+/*    background: url(%%alien%%) ;   ==========can't get this to work============================================================================================== */
+    }
+
+/* Go away, community create =======================================================================================================================================*/ 
+.create {
+    display: none
+    }
+
+/* My Reddts Bar ===================================================================================================================================================*/
+#sr-header-area {
+    max-width: 100%;
+    background: url(%%blank-30px%%); 
+    /*background-color: #bdb8b2;*/
+    /*#00305F;*/
+    border-bottom: none
+    }
+.sr-bar a, .sr-bar .separator {
+    color: darkblue !important
+    }
+#sr-more-link {
+    display: none
+    }
+.dropdown .title {
+    background-color: black;
+    color: white !important
+    }
+.drop-choices .choice {
+    color: black !important
+    }
+.dropdown .title {
+    color: white
+    }
+
+/* Scorebar ========================================================================================================================================================*/
+#header-bottom-right {
+    background-color: white
+    }
+#header-bottom-right a, #header-bottom-right .separator, .user {
+    color: black !important
+    }
+#header-bottom-right a {
+    color: white
+    }
+/* Tabs ============================================================================================================================================================*/
+.tabmenu li a {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    text-transform: uppercase;
+    font-size: 80%;
+    }
+.tabmenu li a {
+    background-color: #b0bac3 !important;
+    color: black;
+    text-shadow: 1px 1px white;
+    text-transform: uppercase;
+    font-size: 80%;
+    }
+.tabmenu li.selected a {
+    background-color: dimgrey !important;
+    color: white;
+    text-shadow: 1px 1px black;
+    border: none;
+    text-transform: uppercase;
+    font-size: 80%;
+    /*border-bottom:1px solid white;*/
+    }
+
+/* reddit name in header area (I think) ===============================================================================================================================*/
+.redditname {
+color:white;
+text-shadow: 1px 1px white;
+}
+
+div.linkinfo {
+color:black;
+}
+
+/* Submission warning blurb */
+
+#newlink .infobar {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    border: 0;
+    text-indent: -10000px
+    }
+#newlink .infobar:after {
+    text-indent: 0;
+    background-color: red;
+    color: yellow !important;
+    border: 0;
+    padding: 10px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    font-size: 15pt;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    border-radius: 7px;
+    }
+#link-desc:after {
+    content: "NOW HEAR THIS! Before you post, please read and follow the rules in the sidebar. We need the resolution in brackets! Failure to do so may result in your post being removed. Carry on, sailor!"
+    }
+
+/* RES Compatibility ==================================================================================================================================================*/
+.res-nightmode .sidebox {
+    padding-left: 0px !important
+    }
+.res-nightmode div.titlebox {
+    background: transparent !important
+    }
+.res-nightmode .md ul {
+    color: white
+    }
+.res-nightmode .flair {
+    background-color: transparent !important;
+    color: black !important
+    }
+.res-nightmode .titlebox blockquote, .res-nightmode .sidecontentbox .content {
+    background-color: transparent !important
+    }
+.res-nightmode .flair {
+    background-color: transparent !important
+    }
+.res-nightmode #sr-header-area, #sr-more-link {
+    background: black !important
+    }
+.res-nightmode .icon-menu a, form.leavemoderator-button {
+    background-color: transparent !important
+    }
+
+/*      Downvote mouseover text ========================================================================================================================================== */
+.arrow.down:hover:before {
+    position: fixed;
+    display: block;
+    z-index: 1000;
+    padding: 4px 0;
+    border-top: 1px solid #FFD700;
+    content: "Why not upboat instead?";
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: navy;
+    color: gold;
+    text-shadow: 1px 1px black;
+    font-size: 15px;
+    /*
+        -moz-box-shadow: 1px 1px 0 rgba(255, 255, 255, .4) inset;
+        box-shadow: 1px 1px 0 rgba(255, 255, 255, .4) inset;
+        -webkit-box-shadow: 1px 1px 0 rgba(255, 255, 255, .4) inset;
+    */
+    /* OLD CODE BELOW
+        position: absolute;
+        display: block;
+        z-index: 1000;
+        width: 200px;
+        padding: 2px;
+        border: 1px solid #333;
+        background-color: #FF002B;
+        content: "Blah";
+        text-align: center;
+        font-size: 10px;
+        font-weight: normal;
+        margin-left: 2px;
+        margin-top: 2px;
+        border-radius: 5px;
+    */
+    }
+
+/* Changes ALL flair text =========================================================================================================================================== */
+.flair { 
+    margin-left: .5em;
+} 
+
+/* flair toggle ============================================================================================================================= */
+form.toggle.flairtoggle {
+background: transparent;
+color: black;
+}
+
+/* special flairs =========================================================================================================================== */
+.flair-cno {
+    background-color:gold;
+    border-color: navy;
+    border-style: solid double;
+    border-width: 1px 5px;
+    color: navy;
+    border-radius: 4px;
+    cursor: help;   
+    font-weight:bold;
+    }
+.flair-cno:hover:after {  
+    content: "Chief of Naval Operations - ⚓Moderator⚓"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    cursor: help;
+    border: 1px solid #E1B000; 
+}
+.flair-cinclantflt, .flair-jimdandy, .flair-kimjong {
+    background-color:gold;
+    border-color: navy;
+    border-style: solid double;
+    border-width: 1px 5px;
+    border-radius: 4px;
+    color: navy;
+    cursor: help;
+    font-weight:bold;
+    }
+.flair-cinclantflt:hover:after {  
+    content: "Commander in Chief, Atlantic Fleet - ⚓Moderator⚓"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    cursor: help;
+    border: 1px solid #E1B000; 
+}
+.flair-jimdandy:hover:after {  
+    content: "First Sea Lord - ⚓Moderator⚓"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    cursor: help;
+    border: 1px solid #E1B000; 
+}
+.flair-kimjong:hover:after {  
+    content: "Forever known as HMS Cockchafer - ⚓Moderator⚓"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    cursor: help;
+    border: 1px solid #E1B000; 
+}
+.flair-top {
+    background-color:gold;
+    border-color: navy;
+    border-style: solid dotted;
+    border-width: 1px 2px;
+    border-radius: 8px;
+    color: navy;
+    cursor: help;
+    font-weight:bold;
+    }
+.flair-top:hover:after {  
+    content: "Top Poster - 200+ Submissions!"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    cursor: help;
+    border: 1px solid #E1B000; 
+}
+.flair-plankowner {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    cursor: help;
+    color: gold;
+    }
+.flair-plankowner:hover:after {  
+    content: "Plankowner"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    border: 1px solid #E1B000; 
+}
+.flair-cmc {
+    background-color:gold;
+    border-color: navy;
+    border-style: solid double;
+    border-width: 1px 5px;
+    color: navy;
+    border-radius: 4px;
+    cursor: help;   
+    font-weight:bold;
+    }
+.flair-cmc:hover:after {  
+    content: "Master-at-Arms/Shore Patrol - ✶Moderator✶"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    cursor: help;
+    border: 1px solid #E1B000; 
+}
+.flair-vepr {
+    background-color: #FF0000;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    cursor: help;
+    color: gold;
+    }
+.flair-vepr:hover:after {  
+    content: "Official WarshipPorn Submarine Expert"; 
+    z-index: 9999; 
+    background-color: #FFFDCC; 
+    margin-left: 5px; 
+    color: black; 
+    position: absolute;
+    border: 1px solid #E1B000; 
+}
+
+/* ww2 flairs ================================================================================================================================================================== */
+
+.flair-dinghy {
+    background-color:black;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: white;
+}
+.flair-dinghy:hover:after { 
+    content: "Dinghies, Narcosubs, Bathtubs, &c."; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-pt {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-pt:hover:after { 
+    content: "PT Boat"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-ff {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ff:hover:after { 
+    content: "Frigate/Gunboat"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-de {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-de:hover:after { 
+    content: "Destroyer Escort"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-dd {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-dd:hover:after { 
+    content: "Destroyer"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cl {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-cl:hover:after { 
+    content: "Light Cruiser"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-ca {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;    
+    cursor: help;
+    }
+.flair-ca:hover:after { 
+    content: "Heavy Cruiser"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cb {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-cb:hover:after { 
+    content: "Battlecruiser"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-bb1 {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-bb1:hover:after { 
+    content: "Dreadnaught"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-bb2 {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-bb2:hover:after { 
+    content: "Treaty Battleship"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-bb3 {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-bb3:hover:after { 
+    content: "Fast Battleship"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cve {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-cve:hover:after { 
+    content: "Escort Carrier"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cvl {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-cvl:hover:after { 
+    content: "Light Carrier"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cva {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    color: silver;
+    cursor: help;
+    }
+.flair-cva:hover:after { 
+    content: "Fleet Carrier"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+/* ww2 flair for plankowners =================================================================================================================================================== */
+
+.flair-pt-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-pt-po:hover:after { 
+    content: "PT Boat - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-ff-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ff-po:hover:after { 
+    content: "Frigate - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+    }
+.flair-de-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-de-po:hover:after { 
+    content: "Destroyer Escort - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-dd-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-dd-po:hover:after { 
+    content: "Destroyer - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cl-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cl-po:hover:after { 
+    content: "Light Cruiser - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ca-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ca-po:hover:after { 
+    content: "Heavy Cruiser - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-cb-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cb-po:hover:after { 
+    content: "Battlecruiser - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-bb1-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-bb1-po:hover:after { 
+    content: "Dreadnaught - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-bb2-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-bb2-po:hover:after { 
+    content: "Treaty Battleship - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-bb3-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-bb3-po:hover:after { 
+    content: "Fast Battleship - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cve-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cve-po:hover:after { 
+    content: "Escort Carrier- Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cvl-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cvl-po:hover:after { 
+    content: "Light Carrier - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-cva-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cva-po:hover:after { 
+    content: "Fleet Carrier - Plankowner"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+/* modern flair ==================================================================================================================================================================*/
+.flair-pm {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-pm:hover:after { 
+    content: "Missile Boat"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-pc {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-pc:hover:after { 
+    content: "Coastal Patrol Boat"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-kg {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-kg:hover:after { 
+    content: "Corvette"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ffg {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ffg:hover:after { 
+    content: "Guided Missile Frigate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ssk {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ssk:hover:after { 
+    content: "Attack Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-ddg {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ddg:hover:after { 
+    content: "Guided Missile Destroyer"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ssn {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ssn:hover:after { 
+    content: "Nuclear Attack Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-cg {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-cg:hover:after { 
+    content: "Guided Missile Cruiser"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ssgn {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ssgn:hover:after { 
+    content: "Guided Missile Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-lhd {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-lhd:hover:after { 
+    content: "Helicopter Assault Ship"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-cv {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-cv:hover:after { 
+    content: "Aircraft Carrier"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-cvn {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-cvn:hover:after { 
+    content: "Nuclear Powered Aircraft Carrier"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ssbn {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ssbn:hover:after { 
+    content: "Ballistic Missile Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+/* modern flair plankowner/special ==============================================================================================================================================*/
+
+.flair-pm-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-pm-po:hover:after { 
+    content: "Missile Boat"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-pc-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-pc-po:hover:after { 
+    content: "Coastal Patrol Boat"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-kg-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-kg-po:hover:after { 
+    content: "Corvette"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ffg-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ffg-po:hover:after { 
+    content: "Guided Missile Frigate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ssk-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ssk-po:hover:after { 
+    content: "Attack Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-ddg-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ddg-po:hover:after { 
+    content: "Guided Missile Destroyer"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-ssn-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ssn-po:hover:after { 
+    content: "Nuclear Attack Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-cg-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cg-po:hover:after { 
+    content: "Guided Missile Cruiser"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ssgn-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ssgn-po:hover:after { 
+    content: "Guided Missile Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-lhd-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-lhd-po:hover:after { 
+    content: "Helicopter Assault Ship"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-cv-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cv-po:hover:after { 
+    content: "Aircraft Carrier"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-cvn-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-cvn-po:hover:after { 
+    content: "Nuclear Powered Aircraft Carrier"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+.flair-ssbn-po {
+    background-color:navy;
+    border: solid #FFD700;
+    border-width: 1px 3px;
+    color: gold;
+    cursor: help;
+    }
+.flair-ssbn-po:hover:after { 
+    content: "Ballistic Missile Submarine"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+/* age of sail flair =========================================================================================================================================================== */
+.flair-cu {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-cu:hover:after { 
+    content: "Cutter"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-gb {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-gb:hover:after { 
+    content: "Gun-Brig"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-sw {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-sw:hover:after { 
+    content: "Sloop-of-War"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-ps {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-ps:hover:after { 
+    content: "Corvette/Post Ship"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-fr {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-fr:hover:after { 
+    content: "Frigate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-hf {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-hf:hover:after { 
+    content: "Heavy Frigate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-4r {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-4r:hover:after { 
+    content: "Fourth Rate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-3r {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-3r:hover:after { 
+    content: "Third Rate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-2r {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-2r:hover:after { 
+    content: "Second Rate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+.flair-1r {
+    background-color:navy;
+    border: solid white;
+    border-width: 1px;
+    cursor: help;
+    color: silver;
+    }
+.flair-1r:hover:after { 
+    content: "First Rate"; z-index: 9999; background-color: #FFFDCC; margin-left: 5px; color: black; position: absolute; border: 1px solid #E1B000; 
+}
+
+/* age of sail po/special flair -- not done. Will do if/when necessary ========================================================================================================== */
+
+
+/*Spoiler Tags ================================================================================================================================================================== */
+
+a[href$="/spoiler"] {
+    background: #FF0000 !important;
+    color: #FF0000 !important;
+    border: 1px solid black;
+    padding-right: 1px;
+    border-radius: 2px
+    }
+a[href$="/spoiler"]:hover {
+    color: #000 !important;
+    background: #FFF !important
+    }
+a[href$="/spoiler"]::before {
+    background: #FFF !important;
+    color: #000 !important;
+    padding: 0px 1px;
+    margin: 0px;
+    margin-right: 1px
+    }
+a[href$="/spoiler"]::before {
+    content: "Answer: "
+    }
+a[href$="/spoiler"][title]::before {
+    content: attr(title) " Answer"
+    }
+
+a[href$="/answer"] {
+    background: #FF0000 !important;
+    color: #FF0000 !important;
+    border: 1px solid black;
+    padding-right: 1px;
+    border-radius: 2px
+    }
+a[href$="/answer"]:hover {
+    color: #000 !important;
+    background: #FFF !important
+    }
+a[href$="/answer"]::before {
+    background: #FFF !important;
+    color: #000 !important;
+    padding: 0px 1px;
+    margin: 0px;
+    margin-right: 1px
+    }
+a[href$="/answer"]::before {
+    content: "Answer: "
+    }
+a[href$="/answer"][title]::before {
+    content: attr(title) " Answer"
+    }
+
+a[href$="/hint"] {
+    background: #00FF00 !important;
+    color: #00FF00 !important;
+    border: 1px solid black;
+    padding-right: 1px;
+    border-radius: 2px
+    }
+a[href$="/hint"]:hover {
+    color: #000 !important;
+    background: #FFF !important
+    }
+a[href$="/hint"]::before {
+    background: #FFF !important;
+    color: #000 !important;
+    padding: 0px 1px;
+    margin: 0px;
+    margin-right: 1px
+    }
+a[href$="/hint"]::before {
+    content: "Hint: "
+    }
+a[href$="/hint"][title]::before {
+    content: attr(title) " Hint"
+    }
+
+/*Spoiler tag within comments*/
+a[href$="/spoiler"] {
+    background: #000 !important;
+    color: #000 !important
+    }
+a[href$="/spoiler"]:hover {
+    color: #FFF !important
+    }
+
+/* Changes upvoted arrow icon (selected) ============================================================================================================================= (disabled)
+
+div.arrow.upmod {
+  background-image:url(IMAGE URL GOES HERE);
+  background-position:0px;
+} */
+
+/* Changes upvote arrow icon (not selected)=========================================================================================================================== (disabled)
+
+div.arrow.up { 
+  background-image:url(IMAGE URL GOES HERE);
+  background-position:0px;
+} */
+
+/* Changes downvoted arrow icon (selected) =========================================================================================================================== (disabled)
+
+div.arrow.downmod {
+  background-image:url(IMAGE URL GOES HERE);
+  background-position:0px;
+} */
+
+/* Changes downvote arrow icon (not selected)========================================================================================================================== (disabled)
+
+div.arrow.down { 
+  background-image:url(IMAGE URL GOES HERE);
+  background-position:0px;
+} */
